@@ -7,8 +7,8 @@ using Test
 end
 
 @testset "Function2" begin
-    @test example_function2(2) == 0
-    @test example_function2(-3) == -5
-    @test example_function2(9) == 7
+    @test example_function_snd(2) == 0
+    @test example_function_snd(-3) == -5
+    @test example_function_snd(9) == 7
 end
 
