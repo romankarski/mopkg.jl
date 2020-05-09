@@ -1,14 +1,10 @@
-using mopkg
-using Test
+using mopkg, Test
 
-@testset "Function1" begin
-    @test example_function(2) == 4
-    @test example_function(-2) == 4
-end
-
-@testset "Function2" begin
-    @test example_function_snd(2) == 0
-    @test example_function_snd(-3) == -5
-    @test example_function_snd(9) == 7
+@testset "NR_testing" begin
+	f, fp, x = x -> x^3 - 5x + 1, x -> 3x^2 - 5, 0
+	@test NR_fun(f, fp, x) == (0.20163967572339103, 3)
+	
+	f, fp, x = x -> x^2 + x + 1, x -> 2x + 1, 0
+	@test NR_fun(f, fp, x) == (-1.0, 1)
 end
 
