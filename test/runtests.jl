@@ -1,7 +1,14 @@
 using mopkg
 using Test
 
-@testset "mopkg.jl" begin
+@testset "Function1" begin
     @test example_function(2) == 4
     @test example_function(-2) == 4
 end
+
+@testset "Function2" begin
+    @test example_function2(2) == 0
+    @test example_function2(-3) == -5
+    @test example_function2(9) == 7
+end
+
